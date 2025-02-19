@@ -2,11 +2,11 @@
 
 Arrays are fundamental data structures used to store elements of the same type in contiguous memory locations. They provide fast access to elements but have different memory allocation strategies based on whether they are static or dynamic.
 
-1️⃣ Static Arrays
+##    **1️⃣ Static Arrays**
 
 A static array is an array with a fixed size, allocated at compile time (for languages like C/C++). The size cannot be changed during runtime.
 
-Characteristics:
+### **Characteristics:**
 ✅ Fixed size (declared at compile-time)
 ✅ Contiguous memory allocation
 ✅ Fast access (O(1) for indexing)
