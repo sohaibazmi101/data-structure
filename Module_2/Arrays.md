@@ -49,7 +49,7 @@ Flexible size: Can grow/shrink dynamically.
 
 Efficient memory usage: Uses heap allocation only when needed.
 
-Disadvantages:
+## **Disadvantages:**
 
 Memory overhead: Requires extra space for resizing.
 
