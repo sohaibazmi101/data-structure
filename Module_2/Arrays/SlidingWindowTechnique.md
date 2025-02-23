@@ -5,15 +5,21 @@ The **Sliding Window technique** is an optimized approach to solve problems rela
 ## **Algorithm**
 
 **1. Initialize Variables**
+
 maxSum = 0 → Stores the maximum sum found.
 windowSum = 0 → Tracks the sum of the current sliding window.
+
 **2. Compute the sum of the first K elements** (Initial Window).
+
 **3. Slide the window**
+
 Move the window one step forward by:
 Subtracting the element that is leaving the window (arr[i-K]).
 Adding the new element entering the window (arr[i]).
 Update maxSum if windowSum is larger.
+
 **4. Return** maxSum after checking all subarrays.
+
 
 ## **Pseudo Code**
 
