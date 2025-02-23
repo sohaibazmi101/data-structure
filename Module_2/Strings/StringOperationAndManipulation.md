@@ -67,11 +67,17 @@ Return count.
 ### **Pseudo Code**
 
 FUNCTION StringLength(str)
+
     count ← 0
+
     FOR each character in str DO
+
         count ← count + 1
+
     END FOR
+
     RETURN count
+    
 END FUNCTION
 
 
