@@ -17,8 +17,8 @@ int IS_ANAGRAM(char str1[], char str2[]);
 // KMP(char text[], char pattern);
 
 int main(){
-    // char str[] = "Hello How are you";
-    // printf("%s",STRING_REVERSAL(str));
+    char strs[] = "Hello How are you";
+    printf("%s",STRING_REVERSAL(strs));
 
     char str1[] = "Sohaib";
     char str2[] = "baihSo";
