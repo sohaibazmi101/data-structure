@@ -40,6 +40,7 @@ END
 
 ---
 
+
 ### **1.2 Stack Using Linked List**
 #### **Algorithm**
 ```plaintext
