@@ -19,7 +19,7 @@ A stack follows **LIFO (Last In, First Out)** principle.
 
 ### **1.1 Stack Using Array**
 #### **Algorithm**
-```plaintext
+```
 1. If TOP == MAX_SIZE - 1
      Print "Stack Overflow"
      Exit
@@ -27,7 +27,7 @@ A stack follows **LIFO (Last In, First Out)** principle.
 3. Insert DATA at stack[TOP]
 ```
 #### **Pseudocode**
-```plaintext
+```
 PUSH(STACK, TOP, DATA)
     IF TOP == MAX_SIZE - 1 THEN
         PRINT "Stack Overflow"
@@ -43,7 +43,7 @@ END
 
 ### **1.2 Stack Using Linked List**
 #### **Algorithm**
-```plaintext
+```
 1. Create a new NODE
 2. If memory allocation fails, print "Stack Overflow"
 3. Set newNode->data = DATA
@@ -51,7 +51,7 @@ END
 5. Update TOP to newNode
 ```
 #### **Pseudocode**
-```plaintext
+```
 PUSH(TOP, DATA)
     NEW_NODE = CREATE_NODE()
     IF NEW_NODE == NULL THEN
