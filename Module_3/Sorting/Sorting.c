@@ -7,6 +7,8 @@ struct Element{
 };
 typedef struct Element Element;
 
+void SWAP(Element *a, Element *b);
+
 void PRINT_ARRAY(Element arr[], int size){
     for(int i = 0; i < size; i++){
         printf("%d ", arr[i].value);
@@ -90,6 +92,61 @@ void MERGE_SORT(Element arr[], int left, int right){
     }
 }
 
+int PARTITION(Element arr[], int low, int high) {
+    Element pivot = arr[high]; 
+    int i = low - 1;
+
+    for (int j = low; j < high; j++) {
+        if (arr[j].value < pivot.value) {
+            i++;
+            SWAP(&arr[i], &arr[j]);
+        }
+    }
+    SWAP(&arr[i + 1], &arr[high]);
+    return i + 1;
+}
+
+void QUICK_SORT(Element arr[], int low, int high){
+    if(low < high){
+        int pivot = PARTITION(arr, low, high);
+        QUICK_SORT(arr, low, pivot - 1);
+        QUICK_SORT(arr, pivot + 1, high);
+    }
+}
+
+void HEAPIFY(Element arr[], int n, int i){
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+    if(left < n && arr[left].value > arr[largest].value){
+        largest = left;
+    }
+    if(right < n && arr[right].value > arr[largest].value){
+        largest = right;
+    }
+    if(largest != i){
+        SWAP(&arr[i], &arr[largest]);
+        HEAPIFY(arr, n, largest);
+    }
+}
+
+void HEAP_SORT(Element arr[], int n){
+    for(int i = n/2 - 1; i >= 0; i--){
+        HEAPIFY(arr, n, i);
+    }
+    for(int i = n - 1; i > 0; i--){
+        SWAP(&arr[0], &arr[i]);
+        HEAPIFY(arr, i, 0);
+    }
+}
+
+
+void SWAP(Element *a, Element *b){
+    Element temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int main(){
     Element arr[MAX];
     printf("Enter Array Elements : (to quit enter -1) : ");
@@ -104,6 +161,6 @@ int main(){
         }
         i++;
     }while(element!=-1);
-    MERGE_SORT(arr, 0, size - 1);
+    HEAP_SORT(arr, size);
     PRINT_ARRAY(arr, size);
 }
