@@ -12,9 +12,24 @@ For an AVL Tree, **Balance Factor** must be in the range **{-1, 0, 1}**.
 When inserting or deleting a node, if the tree becomes unbalanced, we perform **rotations** to restore balance. There are **four types of rotations**:
 
 1. **Left Rotation (LL Rotation)** → Applied when there is an imbalance in the left subtree.
+
+![Alt text](LL.png)
+
+
 2. **Right Rotation (RR Rotation)** → Applied when there is an imbalance in the right subtree.
+
+![Alt text](RR.jpg)
+
+
 3. **Left-Right Rotation (LR Rotation)** → Applied when there is a left-right imbalance (Left subtree is deeper, but new node is in the right child).
+
+![Alt text](LR.webp)
+
+
 4. **Right-Left Rotation (RL Rotation)** → Applied when there is a right-left imbalance (Right subtree is deeper, but new node is in the left child).
+
+![Alt text](RL.jpg)
+
 
 #### **Time Complexity**
 - **Insertion**: \(O(\log n)\)
